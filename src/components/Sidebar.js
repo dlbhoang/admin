@@ -6,7 +6,8 @@ import {
   FaProjectDiagram,
   FaMoneyBillWave,
   FaCog,
-  FaSignOutAlt
+  FaSignOutAlt,
+  FaNewspaper // ⬅️ THÊM ICON CHO BÀI VIẾT
 } from 'react-icons/fa';
 import '../css/Dashboard.css';
 
@@ -14,9 +15,8 @@ const Sidebar = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // Xử lý logic đăng xuất ở đây
-    localStorage.clear(); // ví dụ: xóa token
-    navigate('/login');   // điều hướng về trang đăng nhập
+    localStorage.clear();
+    navigate('/login');
   };
 
   return (
@@ -38,6 +38,12 @@ const Sidebar = () => {
           </NavLink>
         </li>
         <li>
+          <NavLink to="/posts" className="sidebar-item" activeclassname="active">
+            <FaNewspaper className="sidebar-icon" />
+            <span>Bài viết</span>
+          </NavLink>
+        </li>
+        <li>
           <NavLink to="/payments" className="sidebar-item" activeclassname="active">
             <FaProjectDiagram className="sidebar-icon" />
             <span>Hóa đơn</span>
@@ -49,7 +55,6 @@ const Sidebar = () => {
             <span>Thanh toán</span>
           </NavLink>
         </li>
-        
         <li>
           <button className="sidebar-item logout-btn" onClick={handleLogout}>
             <FaSignOutAlt className="sidebar-icon" />
