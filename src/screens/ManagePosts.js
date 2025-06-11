@@ -45,7 +45,6 @@ const ManagePosts = () => {
                 <th>Tiêu đề</th>
                 <th>Tác giả</th>
                 <th>Ngày đăng</th>
-                <th>Trạng thái</th>
                 <th>Hành động</th>
               </tr>
             </thead>
@@ -55,11 +54,7 @@ const ManagePosts = () => {
                   <td>{post.title}</td>
                   <td>{post.author}</td>
                   <td>{post.date}</td>
-                  <td>
-                    <span className={`status ${post.status.replace(/\s/g, '-').toLowerCase()}`}>
-                      {post.status}
-                    </span>
-                  </td>
+                 
                   <td>
                     <button className="edit-btn">Sửa</button>
                     <button className="delete-btn">Xoá</button>
