@@ -1,0 +1,183 @@
+/* Reset cơ bản cho mọi phần tử */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #ecf0f1;
+}
+
+.content-area {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+/* Admin Container */
+.admin-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #f9fbfd;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.admin-container h1 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.admin-container h2 {
+  font-size: 22px;
+  color: #34495e;
+  margin: 25px 0 15px;
+  border-left: 4px solid #3498db;
+  padding-left: 12px;
+}
+
+/* PLAN BOX STYLE */
+.plan-box {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.plan-box:hover {
+  transform: scale(1.01);
+}
+
+.plan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.plan-header h3 {
+  font-size: 18px;
+  color: #2d3436;
+}
+
+input[type="text"] {
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  margin: 10px 0;
+  font-size: 14px;
+  border: 1px solid #dfe6e9;
+  border-radius: 6px;
+  background-color: #f8f9fa;
+  transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #3498db;
+  background-color: #ffffff;
+}
+
+/* DELETE BUTTON */
+.delete-btn {
+  background-color: #e74c3c;
+  border: none;
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+/* ADD & SAVE BUTTONS */
+.add-button,
+.save-button {
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  font-size: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: inline-block;
+}
+
+.add-button:hover {
+  background-color: #27ae60;
+}
+
+.save-button {
+  background-color: #3498db;
+  margin-top: 30px;
+}
+
+.save-button:hover {
+  background-color: #2980b9;
+}
+
+/* FEATURES */
+.feature-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.feature-input {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 1px solid #dcdde1;
+  border-radius: 6px;
+  background-color: #f1f2f6;
+  transition: border 0.2s ease;
+}
+
+.feature-input:focus {
+  outline: none;
+  background-color: #ffffff;
+  border-color: #3498db;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .content-area {
+    padding: 20px;
+  }
+
+  .plan-box {
+    padding: 16px;
+  }
+
+  .feature-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .delete-btn {
+    width: 100%;
+    margin-top: 6px;
+  }
+}
